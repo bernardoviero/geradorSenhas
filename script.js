@@ -1,76 +1,39 @@
 let sliderElement = document.querySelector("#slider");
-let buttonElement = document.querySelector("#button");
 
 let sizePassword = document.querySelector("#valor");
 let password = document.querySelector("#password");
 
-let containerPassword = document.querySelector("#container-password");
+let containerPassword = document.querySelector("#container-password")
 
 
-let charsetLetra = "abcdefghijklmnopqrstuvwxyz"+"ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-let charsetNumero = "0123456789";
-let charsetNumeroLetra = "0123456789"+"abcd0123456789efghijklmn0123456789opqrstuvwxyz"+"ABCD0123456789EFGHIJKLMNOPQ0123456789RSTUVWXYZ";
-let charset = "ABCDE!@FGHIJKLMNO2!@34567PQ**#RSTUVWXYZ!@abchijklmno**#p23456789!@qrsdefghij**#klmnoAB!@CDEFGHI**#JKLMNOpq2!@3456789rst!@uvwxyz#0123!@456789&";
+let charsetLetra = "abcdGHIJKLMNOPQRSTUVWXYZefghGHIJKLMNOPQRSTUVWXYZijklmnopqrstuvwxyzABCDefghEFGHIJKLabcdMNOPQRSefghTUVWXYZ"
+let charsetNumero = "0123456789"
+let charsetNumeroLetra = "abcdGHIJK0123456789LMNOPQRSTUVW0123456789XYZefghGHIJ0123456789KLMNOPQRSTUVWXYZ0123456789ijklmnopqrstuvwxyzABCDefghEFGHIJK0123456789LabcdMNOPQRSefghTUVWXYZ"
+let charsetCompleted = "abcd!@#*GHIJK01234567!@#*89LMNOPQ!@#*RSTUVW0!@#*123456!@#*789XYZefghGHIJ0123456!@#*789KLMNOPQRSTUVWXYZ01234!@#*56789ijklmnopqrstuvwx!@#*yzABC!@#*DefghEFGHIJK01!@#*23456789La!@#*bcdMNOPQRSefghTUV!@#*WXYZ"
 
 let novaSenha = "";
 
-sizePassword.innerHTML= sliderElement.value;
+sizePassword.innerHTML = sliderElement.value;
 
-slider.oninput = function(){
+slider.oninput = function () {
     sizePassword.innerHTML = this.value;
 }
 
-function generatePasswordNumber(){
+function generatePassword(parametro) {
 
     let pass = "";
-
-    for(let i = 0, n = charsetNumero.length; i < (sliderElement.value); ++i){
-        pass += charsetNumero.charAt(Math.floor(Math.random() *n));
+    for (let i = 0, n = parametro.length; i < (sliderElement.value); ++i) {
+        pass += parametro.charAt(Math.floor(Math.random() * n));
     }
+
     containerPassword.classList.remove("hide");
     password.innerHTML = pass;
     novaSenha = pass;
 }
 
-function generatePasswordLetter(){
-
-    let pass = "";
-
-    for(let i = 0, n = charsetLetra.length; i < (sliderElement.value); ++i){
-        pass += charsetLetra.charAt(Math.floor(Math.random() *n));
-    }
-    containerPassword.classList.remove("hide");
-    password.innerHTML = pass;
-    novaSenha = pass;
-}
-
-function generatePasswordLetterNumber(){
-
-    let pass = "";
-
-    for(let i = 0, n = charsetNumeroLetra.length; i < (sliderElement.value); ++i){
-        pass += charsetNumeroLetra.charAt(Math.floor(Math.random() *n));
-    }
-    containerPassword.classList.remove("hide");
-    password.innerHTML = pass;
-    novaSenha = pass;
-}
-
-function generatePassword(){
-
-    let pass = "";
-
-    for(let i = 0, n = charset.length; i < (sliderElement.value); ++i){
-        pass += charset.charAt(Math.floor(Math.random() *n));
-    }
-    containerPassword.classList.remove("hide");
-    password.innerHTML = pass;
-    novaSenha = pass;
-}
-
-function copyPassword(){
+function copyPassword() {
 
     navigator.clipboard.writeText(novaSenha);
 
-    alert(novaSenha+"\n\nSenha copiada!");
+    alert(novaSenha + "\n\nSenha copiada!");
 }

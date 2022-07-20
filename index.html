@@ -20,10 +20,10 @@
         <input id="slider" class="slider" type="range" min="4" max="26" value="8"/>
 
         <span class="tipoSenha">Selecione como deseja que a senha seja:</span>
-        <button id="buttonChooseNumero" class="button-cta" onclick="generatePasswordNumber()">Senha apenas com numeros</button>
-        <button id="buttonChooseLetra" class="button-cta" onclick="generatePasswordLetter()">Senha apenas com letras</button>
-        <button id="buttonChooseLetraNumero" class="button-cta" onclick="generatePasswordLetterNumber()">Senha apenas com letras e números</button>
-        <button id="buttonChooseCompleto" class="button-cta" onclick="generatePassword()">Senha com letras, números e caracteres especiais</button>
+        <button id="buttonChooseNumero" class="button-cta" onclick="generatePassword(charsetNumero)">Senha apenas com numeros</button>
+        <button id="buttonChooseLetra" class="button-cta" onclick="generatePassword(charsetLetra)">Senha apenas com letras</button>
+        <button id="buttonChooseLetraNumero" class="button-cta" onclick="generatePassword(charsetNumeroLetra)">Senha apenas com letras e números</button>
+        <button id="buttonChooseCompleto" class="button-cta" onclick="generatePassword(charsetCompleted)">Senha com letras, números e caracteres especiais</button>
     </main>
 
     <div id = "container-password" onclick="copyPassword()" class="container-password hide">

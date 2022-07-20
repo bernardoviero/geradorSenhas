@@ -23,6 +23,7 @@ body{
 .container-input{
     max-width: 480px;
     margin: 14px 0;
+    text-align: center;
 }
 
 .container-input span{
@@ -33,33 +34,41 @@ body{
 .slider{
     -webkit-appearance: none;
     width: 100%;
-    border-radius: 5px;
-    background: #DFDFDF;
+    border-radius: 10px;
+    background: #3988ee;
     height: 18px;
     outline: none;
     margin-top: 8px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+}
+
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #01295e;
+    cursor: pointer;
+    border-radius: 50%;
 }
 
 .button-cta{
-    height: 23px;
-    background-color: #0c5502;
+    height: 40px;
+    background-color: #3988ee;
     border: 0;
-    border-radius: 8px;
+    border-radius: 20px;
     cursor: pointer;
-    margin-top: 13px;
-    color: #FFF;
+    margin-top: 18px;
+    color: #01295e;
     font-weight: bold;
     font-size: 16px;
 }
 
 .tipoSenha{
     height: 20px;
-    background-color: #18181B;
     margin-top: 30px;
     color: #FFF;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 14px;
 }
 .container-password{
     max-width: 480px;
