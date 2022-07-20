@@ -16,8 +16,8 @@ body{
 }
 
 .logo{
-    max-width: 600px;
-    margin-bottom: 24px;
+    max-width: 500px;
+    margin: 10px;
 }
 
 .container-input{
@@ -83,8 +83,8 @@ body{
     text-align: center;
     color: #FFF;
     font-size: 28px;
-    margin-top: 24px;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+    
 }
 
 .password{
@@ -107,7 +107,7 @@ body{
 .tooltip{
     color:#fff;
     position: relative;
-    top:20px;
+    top:10px;
     padding: 6px 8px;
     background: rgb(15,15,15);
     text-align: center;
