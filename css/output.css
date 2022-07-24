@@ -1,0 +1,38 @@
+.output {
+    margin: 0 auto;
+    max-width: 780px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    font-size: 1.375rem;
+    margin-top: 60px;
+}
+
+.output-container {
+    width: 780px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: #525252;
+    gap: 40px;
+}
+
+.output-cop {
+    width: 160px;
+    height: 70px;
+    background: #2AB2FF;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    margin-left: 20px;
+}
+
+.output-cop a {
+    text-decoration: none;
+    color: #043A59;
+    padding: 40px 60px;
+}

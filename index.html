@@ -1,37 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta nome="keywords" content="Gerador de senha">
-    <title>Gerador de senha</title>
+    <title>Gerador de Senhas</title>
 
-
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <header class="header">
+        <img src="./img/logo.svg" alt="Gerador de Senhas">
+    </header>
+    <main>
+        <section class="tipo" aria-label="Tipo de senha">
+            <div class="tipo-container">
+                <div class="tipo-range">
+                    <span>Tamanho</span>
+                    <input type="range" min="4" max="26" value="8" class="tipo-slider">
+                </div>
+                <div class="tipo-senha">
+                    <input type="checkbox" class="tipo-checkbox">
+                    <span>Números</span>
+                </div>
+                <div class="tipo-senha">
+                    <input type="checkbox" class="tipo-checkbox">
+                    <span>Caracteres especiais</span>
+                </div>
+            </div>
+        </section>
 
-    <img class="logo" src="./assets/logo.png" alt="Gerador de senha logo" />
-
-    <main class="container-input">
-        <span>Tamanho <span id = "valor"></span> caracteres</span>
-        <input id="slider" class="slider" type="range" min="4" max="26" value="8"/>
-
-        <span class="tipoSenha">Selecione como deseja que a senha seja:</span>
-        <button id="buttonChooseNumero" class="button-cta" onclick="generatePassword(charsetNumero)">Senha apenas com numeros</button>
-        <button id="buttonChooseLetra" class="button-cta" onclick="generatePassword(charsetLetra)">Senha apenas com letras</button>
-        <button id="buttonChooseLetraNumero" class="button-cta" onclick="generatePassword(charsetNumeroLetra)">Senha apenas com letras e números</button>
-        <button id="buttonChooseCompleto" class="button-cta" onclick="generatePassword(charsetCompleted)">Senha com letras, números e caracteres especiais</button>
+        <section class="output" aria-label="Senha Gerada">
+            <div class="output-container">
+                <span class="output-gerada">Teste</span>
+            </div>
+            <div class="output-cop">
+                <a href=""><span class="output-copiar">Copiar</span></a>
+            </div>
+        </section>
     </main>
 
-    <div id = "container-password" onclick="copyPassword()" class="container-password hide">
-        <span class="title">Sua senha gerada foi:</span>
-        <span id="password" class="password"></span>
-        <span class="tooltip"> Clique aqui para copiar. ☝️ </span>
-    </div>
-
-    <script src="script.js"></script>
+    <footer class="footer">
+        <p footer-copy>Developed by Bernardo Viero © 2022</p>
+    </footer>
 </body>
 </html>
