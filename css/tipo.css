@@ -1,16 +1,10 @@
 .tipo {
-    margin: 0 auto;
-    max-width: 960px;
     background: #292929;
-    border-radius: 12px;
-    font-size: 1.375rem;
-}
-
-.tipo-container {
     display: flex;
-    justify-content: center;
-    padding: 40px;
     gap: 40px;
+    padding: 40px;
+    border-radius: 10px;
+    font-size: 20px;
 }
 
 .tipo-range span {
@@ -18,10 +12,14 @@
 }
 
 .tipo-slider {
+    position: relative;
+}
+
+.tipo-slider {
     -webkit-appearance: none;
     background: #666666;
     outline: none;
-    width: 290px;
+    width: 250px;
     height: 8px;
     border-radius: 12px;   
 }
@@ -29,29 +27,93 @@
 .tipo-slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%; 
     background: #bbb;
     cursor: pointer;
     border: 1px solid #525252;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 .tipo-slider::-moz-range-thumb {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%; 
     background: #bbb;
     cursor: pointer;
     border: 1px solid #525252;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
 }
 
-.tipo-checkbox {
-    transform: scale(2);
+.tipo-senha input {
+    display: none;
 }
 
-.tipo-senha span {
-    padding-left: 20px;
+.tipo-senha {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.tipo-checkmark {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #666666;
+    border-radius: 2px;
+    position: relative;
+}
+
+.tipo-senha:hover input ~ .tipo-checkmark {
+    background: #8f8f8f;
+}
+
+.tipo-senha input:checked ~ .tipo-checkmark {
+    background: #2ab2ff;
+}
+
+.tipo-senha .tipo-checkmark:after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 5px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.tipo-senha input:checked ~ .tipo-checkmark:after {
+    display: block;
+}
+
+@media (max-width: 1000px) {
+    .tipo {
+       flex-direction: column;
+       gap: 20px;
+    }
+
+    .tipo-slider {
+        width: 180px;
+    }
+}
+
+@media (max-width: 500px) {
+    .tipo {
+        padding: 22px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 350px) {
+    .tipo {
+        background: transparent;
+    }
+
+    .tipo-slider {
+        width: 160px;
+    }
 }

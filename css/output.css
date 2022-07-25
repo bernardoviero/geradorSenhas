@@ -1,38 +1,58 @@
 .output {
-    margin: 0 auto;
-    max-width: 780px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
-    font-size: 1.375rem;
-    margin-top: 60px;
+    grid-template-columns: 4fr 1fr;
+    padding: 40px 0 60px 0;
+    gap: 20px;
 }
 
 .output-container {
-    width: 780px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px;
     background: #525252;
-    gap: 40px;
+    padding: 22px;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 24px;
 }
 
-.output-cop {
-    width: 160px;
-    height: 70px;
-    background: #2AB2FF;
-    font-weight: bold;
+.output-copiar {
+    background: #2ab2ff;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 12px;
-    margin-left: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #043a59;
 }
 
-.output-cop a {
-    text-decoration: none;
-    color: #043A59;
-    padding: 40px 60px;
+@media (max-width: 1000px) {
+    .output {
+        grid-template-columns: 1fr;
+        padding-bottom: 40px;
+    }
+
+    .output-copiar {
+        width: 80px;
+        padding: 20px;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 350px) {
+    .output {
+        padding: 20px 0 40px 0;
+    }
+
+    .output-container {
+        font-size: 18px;
+        width: 240px;
+        padding: 14px;
+        justify-self: center;
+    }
+
+    .output-copiar {
+        font-size: 16px;
+        width: 60px;
+        padding: 14px;
+    }
 }

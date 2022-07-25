@@ -2,6 +2,7 @@ body {
     background: #141414;
     color: #fff;
     font-family: Roboto, Arial, sans-serif;
+    font-weight: 500;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -21,4 +22,19 @@ h1, h2, h3, p {
 img {
     max-width: 100%;
     display: block;
+    padding-bottom: 60px;
+}
+
+@media (max-width: 1000px) {
+    img {
+        width: 340px;
+        padding-bottom: 40px;
+    }
+}
+
+@media (max-width: 350px) {
+    img {
+        width: 300px;
+        padding-bottom: 40px;
+    }
 }

@@ -3,44 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gerador de senhas de vários tipos">
     <title>Gerador de Senhas</title>
 
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
-        <img src="./img/logo.svg" alt="Gerador de Senhas">
+        <img src="./img/logo.svg" alt="Gerador de Senhas" width="509" height="125">
     </header>
     <main>
-        <section class="tipo" aria-label="Tipo de senha">
-            <div class="tipo-container">
-                <div class="tipo-range">
-                    <span>Tamanho</span>
-                    <input type="range" min="4" max="26" value="8" class="tipo-slider">
-                </div>
-                <div class="tipo-senha">
-                    <input type="checkbox" class="tipo-checkbox">
-                    <span>Números</span>
-                </div>
-                <div class="tipo-senha">
-                    <input type="checkbox" class="tipo-checkbox">
-                    <span>Caracteres especiais</span>
-                </div>
+        <article class="tipo" aria-label="Tipo de senha">
+            <div class="tipo-range">
+                <span>Tamanho</span>
+                <input type="range" min="4" max="26" value="8" class="tipo-slider">
             </div>
-        </section>
+            <label class="tipo-senha">
+                <input type="checkbox">
+                <span class="tipo-checkmark" ></span>
+                <span>Números</span>
+            </label>
+            <label class="tipo-senha">
+                <input type="checkbox">
+                <span class="tipo-checkmark"></span>
+                <span>Caracteres especiais</span>
+            </label>
+        </article>
 
-        <section class="output" aria-label="Senha Gerada">
+        <article class="output" aria-label="Senha Gerada">
             <div class="output-container">
-                <span class="output-gerada">Teste</span>
+                <span class="output-gerada">abfDkLoP</span>
             </div>
-            <div class="output-cop">
-                <a href=""><span class="output-copiar">Copiar</span></a>
+            <div class="output-copiar">
+                <span>Copiar</span>
             </div>
-        </section>
+        </article>
     </main>
 
-    <footer class="footer">
-        <p footer-copy>Developed by Bernardo Viero © 2022</p>
+    <footer>
+        <p footer-copy>Developed by Lorem Ipsum © 2022</p>
     </footer>
 </body>
 </html>
