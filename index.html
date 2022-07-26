@@ -21,26 +21,23 @@
 
     <main>
         <article class="container-input">
-            <span class="tamanho">Tamanho</span>
-          <!--<span id="valor"></span-->
-          
+            <span>Tamanho <span id = "valor"></span> caracteres</span>
             <input id="slider" class="slider" type="range" min="4" max="26" value="8" />
 
             <input type="checkbox" id="checkbox" class="checkbox"
-                onclick="generatePassword(charsetNumero)">Números</input>
-            <input type="checkbox" id="checkbox" class="checkbox"
-                onclick="generatePassword(charsetLetra)">Caracteres especiais</input>
+                onclick="senhaNum(numeros)">Números</input>
+            <input type="checkbox" id="checkbox" class="checkbox" onclick="senhaCompleta()">Caracteres especiais</input>
         </article>
 
         <article class="container-output">
-                <span id="password" class="password">teste</span>
-                <span id="copyPassword" class="copyPassword">Copiar</span>
+                <span id="password" class="password"></span>
+                <span id="copyPassword" class="copyPassword" onclick="copyPassword()">Copiar</span>
         </article>
 
     </main>
 
     <footer>
-        <p>Criador por cu 2098</p>
+        <p>Criado  2022</p>
     </footer>
 
     <script src="script.js"></script>
